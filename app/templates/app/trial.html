@@ -1,0 +1,161 @@
+<html>
+<head>
+    <title>Welcome to TheBazaar</title>
+     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link rel="stylesheet" href="/home/mayank/cudu/app/static/app/base.css"  type="text/css" />
+    <script src="/home/mayank/cudu/app/static/app/jquery.min.js"></script>
+</head>
+<body>
+    <div class="nav-bar">
+        <ul class="nav">
+            <div id="links">
+                <li id="home"><a id="home" href="#"><b>HOME</b></a></li>
+                <li id="contact"><a id="contact" href="#"><b>CONTACT US</b></a></li>
+                <li id="shop"><a id="shop" href="#"><b>SHOP</b></a></li>
+                <li id="about"><a id="about" href="#"><b>ABOUT</b></a></li>
+            </div>
+        </ul>
+    </div>
+
+     <!-- Slideshow container -->
+ 
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 2</div>
+    <img src="/home/mayank/cudu/app/static/app/slider1.jpg" style="width:100%">
+    <div class="text">Caption Text</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 2</div>
+    <img src="/home/mayank/cudu/app/static/app/slider2.jpg" style="width:100%">
+    <div class="text">Caption Two</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+</div>
+    </div>
+<!-- Mayank -->
+<div class="main">
+		<div class="content-top">
+<h2>snowboards</h2>
+<div class="close_but"><i class="close1"> </i></div>
+    <ul id="flexiselDemo3">
+				<li><img src="/home/mayank/cudu/app/static/app/board1.jpg" /></li>
+				<li><img src="/home/mayank/cudu/app/static/app/board2.jpg" /></li>
+				<li><img src="/home/mayank/cudu/app/static/app/board3.jpg" /></li>
+				<li><img src="/home/mayank/cudu/app/static/app/board4.jpg" /></li>
+				<li><img src="/home/mayank/cudu/app/static/app/board5.jpg" /></li>
+			</ul>
+</div>
+</div>
+</div>
+<!-- Mayank -->
+<!-- Footer -->
+    <div class="footer">
+        <div class="nearby">
+            <ul class="nearby-ul">
+                <span id="foot-span" style="color: white;"><b>NEARBY</b></span>
+                <li id="op1"><a id="op1" href="#">Option1</a></li>
+                <li id="op2"><a id="op2" href="#">Option2</a></li>
+                <li id="op3"><a id="op3" href="#">Option3</a></li>
+            </ul>
+        </div>
+
+        <div class="customer">
+            <ul class="customer-ul">
+                <span id="foot-span" style="color: white"><b>CUSTOMER</b></span>
+                <li id="op1"><a id="op1" href="#">Option1</a></li>
+                <li id="op2"><a id="op2" href="#">Option2</a></li>
+                <li id="op3"><a id="op3" href="#">Option3</a></li>
+            </ul>
+        </div>
+
+        <div class="email">
+            <span style="color: white;"><b>SUBSCRIBE</b></span>
+            <form>
+                <input id="ip-txt" type="text" value="Enter your email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your email';}">
+                <input id="ip-bttn" type="submit" value="Go">
+            </form>
+        </div>
+
+    </div>
+
+
+<script>
+    var slideIndex = 0;
+    showSlides();
+
+// Next/previous controls
+//function plusSlides(n) {
+//  showSlides(slideIndex += n);
+//}
+
+// Thumbnail image controls
+//function currentSlide(n) {
+//  showSlides(slideIndex = n);
+//}
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  //if (n > slides.length) {slideIndex = 1}
+  //if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 5000);
+}
+
+
+</script>
+
+<script type="text/javascript">
+		$(window).load(function() {
+			$("#flexiselDemo3").flexisel({
+				visibleItems: 5,
+				animationSpeed: 1000,
+				autoPlay: true,
+				autoPlaySpeed: 3000,
+				pauseOnHover: true,
+				enableResponsiveBreakpoints: true,
+		    	responsiveBreakpoints: {
+		    		portrait: {
+		    			changePoint:480,
+		    			visibleItems: 1
+		    		},
+		    		landscape: {
+		    			changePoint:640,
+		    			visibleItems: 2
+		    		},
+		    		tablet: {
+		    			changePoint:768,
+		    			visibleItems: 3
+		    		}
+		    	}
+		    });
+
+		});
+		</script>
+<script type="text/javascript" src="/home/mayank/cudu/app/static/app/jquery.flexisel.js"></script>
+</body>
+</html>
