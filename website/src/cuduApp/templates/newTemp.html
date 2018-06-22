@@ -6,12 +6,13 @@
     <title>Welcome</title>
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran|IM+Fell+English+SC|IM+Fell+Great+Primer+SC" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="../../static/css/custom.css">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="../../static/css/Footer-with-button-logo.css">
 </head>
-<body onscroll="scroll()">
+<body onscroll="scroll()" onload="f()">
 
 <!--Nav-Bar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="cudu-nav" style="opacity: 0.4; transition: 0.5s ease">
@@ -73,28 +74,18 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col" style="background: #ba2121">
-            <img src="../../static/images/img3.jpg" class="rounded mx-auto d-block img-fluid" alt="content" style="width: 50rem; height: 25rem; padding-top: 6rem; margin-bottom: 5rem; filter: grayscale(100%)">
-        </div>
+    <div class="row" id="typedtext" style="background: #0b0b0b">
     </div>
 
     <div class="row">
-        <div class="col" style="display: block; position: relative">
-            <img src="../../static/images/target-shops.jpg" class="img-fluid" style="filter: grayscale(100%);">
-            <div class="cudu-text text-center">&#9989;<br/>I am some text</div>
-        </div>
         <div class="col">
-            <img src="../../static/images/target-shops-1.jpg" class="img-fluid" style="filter: grayscale(100%);">
-            <div class="cudu-text text-center">&#9989;<br/>I am some text</div>
-        </div>
-        <div class="col">
-            <img src="../../static/images/target-shops-4.jpg" class="img-fluid" style="filter: grayscale(100%);">
-            <div class="cudu-text text-center">&#9989;<br/>I am some text</div>
+            <div id="map" style="height: 28rem; width: 100%;"></div>
         </div>
     </div>
 
-    <div class="row" style="background: black">
+
+
+    <div class="row" style="background: black" id="frame">
         <div class="col">
             <img src="/home/mann/Downloads/frame.png" class="img-fluid rounded mx-auto d-block" style="padding-top: 5rem; padding-bottom: 5rem;">
         </div>
@@ -164,6 +155,91 @@
         else document.getElementById('cudu-nav').style.opacity = 0.4;
     }
 </script>
+
+<script>
+      var map, infoWindow;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 17
+        });
+        infoWindow = new google.maps.InfoWindow;
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.');
+            infoWindow.open(map);
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+        infoWindow.open(map);
+      }
+
+
+    </script>
+
+
+<script>
+var aText = new Array(
+"\"If your business is not on the internet , then your business will be out of business\"",
+    "-BILL GATES"
+);
+var iSpeed = 100; // time delay of print out
+var iIndex = 0; // start printing array at this posision
+var iArrLength = aText[0].length; // the length of the text array
+var iScrollAt = 20; // start scrolling up at this many lines
+
+var iTextPos = 0; // initialise text position
+var sContents = ''; // initialise contents variable
+var iRow; // initialise current row
+
+function typewriter()
+{
+ sContents =  ' ';
+ iRow = Math.max(0, iIndex-iScrollAt);
+ var destination = document.getElementById("typedtext");
+
+ while ( iRow < iIndex ) {
+  sContents += aText[iRow++] + '<br />';
+ }
+ destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+ if ( iTextPos++ == iArrLength ) {
+  iTextPos = 0;
+  iIndex++;
+  if ( iIndex != aText.length ) {
+   iArrLength = aText[iIndex].length;
+   setTimeout("typewriter()", 500);
+  }
+ } else {
+  setTimeout("typewriter()", iSpeed);
+ }
+}
+
+
+typewriter();
+</script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfVoHrouJtbK9k_NPAm7lRbJQZbtgbCEY&callback=initMap"
+    async defer></script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
