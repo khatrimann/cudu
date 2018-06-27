@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="../../static/css/Footer-with-button-logo.css">
 </head>
-<body onscroll="scroll()" onload="f()">
+<body onscroll="scroll()">
 
 <!--Nav-Bar-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="cudu-nav" style="opacity: 0.4; transition: 0.5s ease">
@@ -64,7 +64,7 @@
 
     <div class="row cudu-row" id="mann">
         <div class="col" style="background: #0c5460;">
-            <img src="../../static/images/img2.jpg" class="img-fluid rounded-circle mx-auto d-block" style="width: 20rem; height: 20rem; margin-top: 80px; filter: grayscale(100%) brightness(90%) contrast(60%); " alt="Responsive image">
+            <img src="../../static/images/img2.jpg" id="effect" class="img-fluid rounded-circle" style="width: 20rem; height: 20rem; display: none; margin-left: auto;margin-right: auto;margin-top: 80px; filter: grayscale(100%) brightness(90%) contrast(60%);" alt="Responsive image">
         </div>
         <div class="col" style="background: #637381;">
             <div class="cudu-padding">
@@ -242,13 +242,60 @@
     }
 
 
-    typewriter();
+    //typewriter();
 </script>
+<script type="text/javascript">
+    var triggered = false;
+    document.addEventListener('scroll', function () {
+        console.log("Window");
+        console.log(window.pageYOffset);
+        console.log("PageOffset");
 
+        console.log(document.getElementById('effect').offsetTop);
+       if (window.pageYOffset >= document.getElementById('effect').offsetTop)
+       {
+           $('#effect').css({
+
+        opacity: 0,
+        display: 'block'
+    }).animate({opacity:1},1500);
+       }
+
+       if(window.pageYOffset >= document.getElementById('typedtext').offsetTop - document.getElementById('cudu-nav').offsetHeight)
+       {
+           console.log('triggered');
+           console.log("Value of t is");
+           console.log(triggered);
+           if(triggered === false)
+           {
+               typewriter();
+           }
+           triggered = true;
+
+       }
+
+        var elem = document.getElementById("effect");
+        var pos = 0;
+        var id = setInterval(frame, 5);
+        function frame() {
+            if (pos == 350) {
+                clearInterval(id);
+            } else {
+            pos++;
+            elem.style.top = pos + 'px';
+            elem.style.left = pos + 'px';
+    }
+  }
+
+    });
+
+</script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfVoHrouJtbK9k_NPAm7lRbJQZbtgbCEY&callback=initMap"
         async defer></script>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 </body>
