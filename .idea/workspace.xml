@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45e71607-6bd6-4cfe-a6c3-b618ffbc2578" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/website/src/cuduApp/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/website/src/cuduApp/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,60 +13,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/website/src/static/css/custom.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="14" selection-start-column="14" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/website/src/cuduApp/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="86" column="47" selection-start-line="86" selection-start-column="47" selection-end-line="86" selection-end-column="47" />
+            <state relative-caret-position="369">
+              <caret line="554" column="30" selection-start-line="549" selection-start-column="24" selection-end-line="554" selection-end-column="30" />
               <folding>
                 <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="newTemp.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/website/src/cuduApp/templates/newTemp.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-102">
-              <caret line="9" column="43" selection-start-line="9" selection-end-line="10" />
-              <folding>
-                <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="shop-bootstrap.min.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/website/src/static/css/shop-bootstrap.min.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -85,25 +38,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>see</find>
-      <find>u</find>
-      <find>resp     $12.00&lt;/span&gt;&lt;/li&gt;</find>
-      <find>respons</find>
-      <find>responsive</find>
-      <find>arro</find>
-      <find>bg-dar</find>
-      <find>fooo</find>
-      <find>getl</find>
-      <find>getlo</find>
-      <find>pane</find>
-      <find>scro</find>
-      <find>type</find>
       <find>map</find>
       <find>f</find>
       <find>id</find>
       <find>hide</find>
       <find>nav-ite</find>
+      <find>d-</find>
+      <find>custo</find>
+      <find>custom</find>
+      <find>col</find>
+      <find>inp</find>
+      <find>form</find>
+      <find>color</find>
+      <find>img-roun</find>
+      <find>control</find>
+      <find>form-</find>
+      <find>btn</find>
+      <find>list</find>
       <find>nav</find>
+      <find>carousel</find>
+      <find>next</find>
+      <find>prev</find>
+      <find>right</find>
+      <find>item</find>
+      <find>left</find>
+      <find>hidden</find>
+      <find>text</find>
+      <find>center</find>
+      <find>box</find>
+      <find>conte</find>
+      <find>our</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -130,8 +94,8 @@
         <option value="$PROJECT_DIR$/website/src/cuduApp/templates/newTemp.py" />
         <option value="$PROJECT_DIR$/website/src/static/css/custom.css" />
         <option value="$PROJECT_DIR$/website/src/cuduApp/templates/newTemp.html" />
-        <option value="$PROJECT_DIR$/website/src/cuduApp/templates/index.html" />
         <option value="$PROJECT_DIR$/website/src/static/css/shop-bootstrap.min.css" />
+        <option value="$PROJECT_DIR$/website/src/cuduApp/templates/index.html" />
       </list>
     </option>
   </component>
@@ -326,7 +290,7 @@
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30513597" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30966768" />
       <window_info anchor="right" id="R Packages" order="3" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="R Graphics" order="3" />
@@ -633,10 +597,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/website/src/static/css/shop-bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/website/src/cuduApp/templates/newTemp.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="9" column="43" selection-start-line="9" selection-end-line="10" />
+        <state relative-caret-position="238">
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
           <folding>
             <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -661,18 +632,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/website/src/cuduApp/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="86" column="47" selection-start-line="86" selection-start-column="47" selection-end-line="86" selection-end-column="47" />
+        <state relative-caret-position="369">
+          <caret line="554" column="30" selection-start-line="549" selection-start-column="24" selection-end-line="554" selection-end-column="30" />
           <folding>
             <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/src/static/css/shop-bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
         </state>
       </provider>
     </entry>
